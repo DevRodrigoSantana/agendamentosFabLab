@@ -14,9 +14,12 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
   h1 {
+    padding: 0.2rem 0.3rem;
+    background: vars.$color-primary010;
     font-size: vars.$font-size-large;
     font-weight: 700;
     color: vars.$color-primary;
+    border-radius: 10px;
   }
 
   .menu {

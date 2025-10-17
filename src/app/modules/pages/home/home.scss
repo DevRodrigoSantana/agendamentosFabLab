@@ -1,15 +1,23 @@
 @use '../../../../scss/theme/variable' as vars;
 
+// ==================== Header ====================
 ::ng-deep app-header {
   .menu {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; 
+
+    .icon-lab:before {
+      content: "\e9aa";
+    }
 
     a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       color: vars.$color-text;
       font-family: vars.$font-primary;
       font-size: vars.$font-size-base;
@@ -25,7 +33,7 @@
     }
   }
 
-  
+  // Header Responsivo
   @media (max-width: 768px) {
     .menu {
       flex-direction: column;
@@ -40,16 +48,18 @@
   }
 }
 
+//  Home Main 
 .home-main {
-  margin-top: 1%;
+  margin-top: 0.5%;
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 1rem;
 
+    // Hero Section
     .hero {
       flex: 1;
       display: flex;
@@ -62,6 +72,19 @@
         font-weight: 700;
         color: vars.$color-primary;
         margin-bottom: 1rem;
+      }
+
+      .strong-anim {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: vars.$font-size-large;
+        font-weight: 700;
+        color: vars.$color-primary;
+        margin-bottom: 1rem;
+        border-right: 3px solid vars.$color-primary; // cursor
+        width: 0; // começa invisível
+        animation: typing 5.5s steps(33, end) infinite, blink-caret 0.75s step-end infinite;
       }
 
       p {
@@ -80,12 +103,13 @@
       }
     }
 
+    // Logo Section
     .logo {
-      max-width: 500px;
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      max-width: 500px;
 
       img {
         max-width: 100%;
@@ -94,7 +118,7 @@
     }
   }
 
-  
+  //responsividade
   @media (max-width: 1024px) {
     .container {
       flex-direction: column;
@@ -128,6 +152,7 @@
   @media (max-width: 600px) {
     .container {
       padding: 1rem;
+
       .hero {
         padding: 1rem;
 
@@ -151,4 +176,11 @@
       }
     }
   }
+}
+
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 33ch; }  // digita até o final
+  100% { width: 0; }    // ap
 }
