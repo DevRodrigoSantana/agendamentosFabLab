@@ -1,0 +1,92 @@
+@use '../../../../scss/theme/variable' as vars;
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: vars.$color-background;
+  color: vars.$color-text;
+  font-family: vars.$font-primary;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-size: vars.$font-size-large;
+    font-weight: 700;
+    color: vars.$color-primary;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    a,
+    button {
+      font-family: vars.$font-primary;
+      font-size: vars.$font-size-base;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: vars.$color-text;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.12s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        background-color: vars.$color-primary;
+        color: vars.$color-background;
+        outline: none;
+        transform: translateY(-2px);
+      }
+    }
+
+    // botão padrão no header
+    button {
+      background-color: vars.$color-secondary;
+      color: vars.$color-background;
+
+      &:hover {
+        background-color: darken(vars.$color-secondary, 10%);
+        color: vars.$color-background;
+      }
+    }
+  }
+
+  // variação quando o header estiver com a classe "scrolled"
+  &.scrolled {
+    background-color: vars.$color-primary;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    h1 {
+      color: vars.$color-background;
+    }
+
+    .menu a,
+    .menu button {
+      color: vars.$color-background;
+
+      &:hover {
+        color: vars.$color-primary;
+        background-color: vars.$color-background;
+      }
+    }
+  }
+}

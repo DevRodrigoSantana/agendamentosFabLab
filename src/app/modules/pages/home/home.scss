@@ -1,0 +1,154 @@
+@use '../../../../scss/theme/variable' as vars;
+
+::ng-deep app-header {
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; 
+
+    a {
+      color: vars.$color-text;
+      font-family: vars.$font-primary;
+      font-size: vars.$font-size-base;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: vars.$color-primary;
+        color: vars.$color-background;
+      }
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.home-main {
+  margin-top: 2%;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 2rem;
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 80vh;
+      padding: 2rem;
+
+      h2 {
+        font-size: vars.$font-size-large;
+        font-weight: 700;
+        color: vars.$color-primary;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: vars.$font-size-base;
+        color: vars.$color-text;
+        max-width: 600px;
+      }
+
+      .img-maquina {
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .logo {
+      max-width: 500px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .hero {
+        padding: 1.5rem;
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+          max-width: 90%;
+          margin: 0 auto;
+        }
+
+        .img-maquina {
+          max-width: 90%;
+        }
+      }
+
+      .logo {
+        max-width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+      .hero {
+        padding: 1rem;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+
+        .img-maquina {
+          margin-top: 1rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .logo {
+        max-width: 250px;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
