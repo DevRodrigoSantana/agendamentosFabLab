@@ -11,10 +11,12 @@
 }
 
 html, body {
-  height: 100vh;
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: vars.$color-background;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 ul, ol {
