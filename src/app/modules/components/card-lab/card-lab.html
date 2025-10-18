@@ -1,0 +1,18 @@
+<div class="card-lab">
+  @if (title) {
+    <h3>{{ title }}</h3>
+  }
+  @if (img) {
+    <img src={{img}} alt="">
+  }
+
+  @if (local) {
+    <p>{{ local }}</p>
+  }
+
+  <ng-content></ng-content>
+
+  @if (link) {
+    <a [routerLink]="link" class="card-link">{{ linkText || 'Acessar' }}</a>
+  }
+</div>
