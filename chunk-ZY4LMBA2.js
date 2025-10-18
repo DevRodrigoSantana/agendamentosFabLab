@@ -1,0 +1,1 @@
+import{Oa as s,Pa as o,Ta as n,ya as a}from"./chunk-CW27P6YY.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-labs"]],decls:2,vars:0,template:function(e,p){e&1&&(s(0,"p"),n(1,"labs works!"),o())},encapsulation:2})};export{i as Labs};
