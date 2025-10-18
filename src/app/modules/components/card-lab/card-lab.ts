@@ -12,7 +12,6 @@ export class CardLab {
   @Input() title?: string;
   @Input() local?: string;
   @Input() link?: string;
-  @Input() linkText?: string;
   @Input() img?: string
 
 }

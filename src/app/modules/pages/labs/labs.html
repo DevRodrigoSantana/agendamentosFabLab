@@ -1,1 +1,41 @@
-<p>labs works!</p>
+
+<app-header>
+  <ul class="menu">
+    <li>
+      <a 
+        routerLink="/labs">
+        <span class="material-symbols-outlined">school</span>Laboratórios
+      </a>
+    </li>
+    <li>
+      <a 
+        routerLink="/login">
+        <span class="material-symbols-outlined">event</span>Agenda
+      </a>
+    </li>
+    <li>
+      <a 
+        routerLink="/login">
+        <span class="material-symbols-outlined">account_circle</span>Entrar
+
+      </a>
+    </li>
+  </ul>
+
+
+</app-header>
+<section class="labs-container">
+  <h2>Laboratórios</h2>
+
+  <div class="labs-grid">
+    @for (lab of labs; track lab.title) {
+      <app-card-lab
+        [title]="lab.title"
+        [img]="lab.img"
+        [local]="lab.local"
+        [link]="lab.link"
+        linkText="Ver mais"
+      ></app-card-lab>
+    }
+  </div>
+</section>

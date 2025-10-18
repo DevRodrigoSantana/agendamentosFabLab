@@ -1,4 +1,4 @@
-<div class="card-lab">
+<div class="app-card-lab">
   @if (title) {
     <h3>{{ title }}</h3>
   }
@@ -7,12 +7,12 @@
   }
 
   @if (local) {
-    <p>{{ local }}</p>
+    <p><span class="material-symbols-outlined">location_on</span>{{ local }}</p>
   }
 
   <ng-content></ng-content>
 
   @if (link) {
-    <a [routerLink]="link" class="card-link">{{ linkText || 'Acessar' }}</a>
-  }
+  <a [href]="link"><span class="material-symbols-outlined">mail</span>{{ link }}</a>
+}
 </div>

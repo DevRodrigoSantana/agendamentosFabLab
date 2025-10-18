@@ -1,0 +1,68 @@
+@use '../../../../scss/theme/variable' as vars;
+
+::ng-deep app-header {
+  .menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+    .icon-lab:before {
+      content: "\e9aa";
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: vars.$color-text;
+      font-family: vars.$font-primary;
+      font-size: vars.$font-size-base;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: vars.$color-primary;
+        color: vars.$color-background;
+      }
+    }
+  }
+
+  // Header Responsivo
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+
+.labs-container {
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .labs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* duas colunas */
+    gap: 1.5rem;
+    justify-items: center; /* centraliza os cards na grade */
+  }
+}
