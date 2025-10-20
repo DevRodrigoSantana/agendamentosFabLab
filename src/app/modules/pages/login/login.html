@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+<div class="form-login">
+    <form [formGroup]= "logiForm"(ngSubmit)="onSubmit()">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Digite seu email">
+        <label for="passaword">Senha</label>
+        <input id="passaword" type="password" formControlName= "password" placeholder="Digite sua senha ">
+        <button type="submit" [disabled]="logiForm.invalid">Entrar</button>
+        <p>Esquecei minha senha</p>
+    </form>
+</div>

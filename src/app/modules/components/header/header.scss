@@ -1,6 +1,7 @@
 @use '../../../../scss/theme/variable' as vars;
 
 .app-header {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -50,6 +50,7 @@
 
 //  Home 
 .home-main {
+  width: 100vw;
   margin-top: 0.5%;
 
   .container {
@@ -68,6 +69,7 @@
       padding: 2rem;
 
       h2 {
+        width: 100vw;
         font-size: vars.$font-size-large;
         font-weight: 700;
         color: vars.$color-primary;
@@ -149,7 +151,7 @@
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 414px) {
     .container {
       padding: 1rem;
 
@@ -157,7 +159,7 @@
         padding: 1rem;
 
         h2 {
-          font-size: 1.5rem;
+          font-size: 0.1rem;
         }
 
         p {

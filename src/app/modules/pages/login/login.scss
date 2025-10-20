@@ -1,0 +1,67 @@
+@use '../../../../scss/theme/variable' as vars;
+
+
+:host {
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+}
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: vars.$color-background;
+
+  form {
+    background: vars.$color-primary010;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    input {
+      padding: 0.5rem;
+      border: none;
+      color: black;
+      border-bottom: 2px solid vars.$color-primary;
+      background-color: transparent;
+
+      // 🔒 Corrige cor do autofill
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px vars.$color-primary010 inset !important;
+        -webkit-text-fill-color: black !important;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem;
+      background-color: vars.$color-primary;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+      }
+    }
+
+    p {
+      margin-top: auto;             // empurra para baixo se necessário
+      text-align: center;
+      color: vars.$color-error;
+      font-size: 0.9rem;
+    }
+  }
+}
