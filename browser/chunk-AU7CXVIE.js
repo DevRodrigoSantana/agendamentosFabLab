@@ -1,0 +1,1 @@
+import{$a as o,Ia as n,ab as l,ib as a}from"./chunk-3C4K6DAS.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-control-panel"]],decls:2,vars:0,template:function(e,s){e&1&&(o(0,"p"),a(1,"control-panel works!"),l())},encapsulation:2})};export{p as ControlPanel};
